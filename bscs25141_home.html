@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wear and Carry-home page</title>
+  <link rel="stylesheet" href="bscs25141_home.css">
+  <script src="bscs25141_script.js"></script>
+</head>
+<body onload="mypage()">
+
+  <!-- NAVBAR (copy this into your other pages too) -->
+  <header>
+    <nav class="navbar">
+      <a class="nav-link" href="bscs25141_home.html">HOME</a>
+      <a class="nav-link" href="bscs25141_products.html">PRODUCTS</a>
+      <a class="nav-link" href="bscs25141_contactus.html">ABOUT US</a>
+     
+    <input type="text" placeholder="Search here">
+  <button onclick="mypage">Click this button</button>
+    <p id="mypage"></p>
+    <script>
+function mypage() {
+  var txt;
+  if (confirm("Welcome to Wear and carry")) {
+    txt = "You pressed OK!";
+  } else {
+    txt = "You pressed Cancel!";
+  }
+  document.getElementById("demo").innerHTML = txt;
+}
+</script>
+    </nav>
+<div class="nav-logo">
+<div class="logo">
+  <img src="log0a.png" alt="Logo">
+</div>
+  </header>
+
+  <!-- HERO / About Us (full width image with centered text) -->
+<div class="banner">
+  
+    <img src="banner.png" alt="samples">
+  </div>
+
+    <!-- Put your cover image in the same folder and name it cover.jpg (or update the filename) -->
+    <div class="hero-text">Welcome to Wear and Carry</div>
+  </section>
+
+  <!-- PRODUCTS CTA -->
+  <section class="section">
+    <h2 class="section-title"><a class="btn" > Our Products</a></h2>
+
+    <!-- Fix the image tag: correct src and include alt -anner">
+
+    <!-- Styled link that looks like a button -->
+   
+  </section>
+<section class="products">
+  <h2 class="section-title"><a class="btn1">Products Samples</a></h2>
+
+  <div class="product-grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <img src="bscs25141img01.jpg" alt="Shoes">
+      <h3>Stylish Shoes</h3>
+      <p>Comfortable running shoes with breathable fabric.</p>
+      <p><b>Price:</b> Rs. 3,500</p>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <img src="bag.jpg" alt="Bag">
+      <a class="product-card-link"></a>
+      <h3>Leather Bag</h3>
+      <p>Durable leather bag, perfect for work or travel.</p>
+      <p><b>Price:</b> Rs. 5,000</p>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <img src="wal.jpg" alt="Wallet">
+      <h3>Men's Wallet</h3>
+      <p>Slim design wallet with multiple card slots.</p>
+      <p><b>Price:</b> Rs. 1,200</p>
+    </div>
+
+    <!-- Product 4 -->
+    <div class="product-card">
+      <img src="shirts.jpg" alt="Shirt">
+      <h3>Cotton Shirt</h3>
+      <p>Soft cotton shirt, available in multiple colors.</p>
+      <p><b>Price:</b> Rs. 2,200</p>
+    </div>
+  </div>
+</section>
+<section class="section1">
+    <p><a class="btn" href="bscs25141_products.html">Check Products</a></p>
+</section>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <h2>Contact us</h2>
+    <p>Cell: +92-3356765407 | Email: info@wearaandcarry | Location: Lahore, Pakistan</p>
+  </footer>
+
+</body>
+</html>

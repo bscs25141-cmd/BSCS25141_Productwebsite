@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us page</title>
+    <link rel="stylesheet" href="bscs25141_home.css"
+    <script src="bscs25141_script.js"></script>
+</head>
+<body>
+    <header>
+    <nav class="navbar">
+      <a class="nav-link" href="bscs25141_home.html">HOME</a>
+      <a class="nav-link" href="bscs25141_products.html">PRODUCTS</a>
+      <a class="nav-link" href="bscs25141_contactus.html">ABOUT US</a>
+    
+    </nav>
+<div class="nav-logo">
+<div class="logo">
+  <img src="log0a.png" alt="Logo">
+</div>
+  </header>
+  <div class="form">
+  <h3><a class="btn">Form Details</a></h3> 
+    
+  <form onsubmit="return validateEmail()">
+<label for="name">Type your full name</label>
+
+<input type="text" id="name">
+<br>
+<br>
+<label for="Email">Enter a valid Email</label>
+
+<input type="text" id="Email">
+<input type="submit" value="Submit">
+  </form>
+  <script>
+function validateEmail(){
+let name=document.getElementById('name').value.trim(); 
+let email=document.getElementById('Email').value.trim();
+if(name===""||email===""){  
+    alert("All fields are mandatory to be filled");
+    return ;
+}
+     if(!email.includes("@")){
+        alert("Email must include '@'");
+        return ;
+     }
+     alert("email is valid ");
+    return ;
+}
+
+  </script>
+  </div>
+  <section class="products">
+  <h3><a class="btn">About Us</a></h3>
+  <p>About <b>Wear and carry</b>,We are developing our name in th market by building trust in the mind of the people.
+    It is the secure and reliable market palce were you can purchase our special and awesome articles . We are 
+  really improving our market strategy and also introducing new products </p>
+  <h3><a class="btn">Contact details</a></h3>
+  <br>
+  <p><h4><b>CELL : </b>+923364868593</h4></p>
+<br>
+<p><h4><b>Email  :</b> alikashif4185@gmail.com</h4></p>
+<br>
+<p><h4><b>Location :</b></h4></p>
+<br>
+<img src="map.png" alt="Location">
+<h3><a class="btn">Social Media Links</a></h3>
+<img src="a.jpg" alt="Instagram"> 
+<br>
+ <a href="https://www.instagram.com/ali570859/" target="_blank">Instagram link</a>
+<br>
+<img src="bscs25141img03.png" alt="Facebook">
+<br>
+<a href="https://www.instagram.com/ali570859/">Facebook link</a>
+<br>
+<br>
+<h3><b>Linkedin Profile link</b></h3>
+<a href="https://www.linkedin.com/onboarding/start/people-you-may-know/new/?source=coreg" alt="Linkedin">Linkedin Profile</a>
+  </section>
+  <div class="chatbox">
+<h2>Chat with us</h2>
+<input type="text" id="user-input" placeholder="Type your question here">
+<button onclick="sendMessage()">Send</button>
+<script>
+    function sendMessage() {
+      let input = document.getElementById("user-input").value.trim().toLowerCase();
+      let chatbox = document.getElementById("chat-box");
+
+      if (input === "") return; 
+
+      let userMsg = document.createElement("p");
+      userMsg.textContent = "You: " + input;
+      userMsg.classList.add("user");
+      chatbox.appendChild(userMsg);
+
+      let botResponse = getBotResponse(input);
+      let botMsg = document.createElement("p");
+      botMsg.textContent = "Bot: " + botResponse;
+      botMsg.classList.add("bot");
+      chatbox.appendChild(botMsg);
+      chatbox.scrollTop = chatLog.scrollHeight;
+      document.getElementById("user-input").value = "";
+    }
+
+    function getBotResponse(input) {
+      if (input.includes("hello") || input.includes("hi")) {
+        return "Hello! How can I help you today?";
+      } else if (input.includes("how are you")) {
+        return "Im just a bot, but Im doing great! ";
+      } else if (input.includes("bye")) {
+        return "Goodbye! Have a great day!";
+      } else if (input.includes("your name")) {
+        return "Im your friendly chatbot ";
+      } else {
+        return "Sorry, I didnt understand that. Try saying hello!";
+      }
+    }
+  </script>
+
+  
+</div>
+  </div>
+</body>
+</html>
